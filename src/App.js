@@ -9,6 +9,8 @@ import Technology from "./components/Technology";
 import Entertainment from "./components/Entertainment";
 import Business from "./components/Business";
 import Health from "./components/Health";
+import NotFound from "./components/NotFound";
+
 function App() {
   const [showForm, setShowForm] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
@@ -94,6 +96,7 @@ function App() {
             <Route path="/entertainment" element={<Entertainment {...Props} />}></Route>
             <Route path="/business" element={<Business {...Props} />}></Route>
             <Route path="/health" element={<Health {...Props} />}></Route>
+            <Route path="*" element={<NotFound />}></Route>
           </Routes>
         </BrowserRouter>
     </>
